@@ -1,0 +1,33 @@
+body, html {
+    height: 100%; /* Make sure both body and html elements have 100% height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+body {
+    font-family: 'Arial', sans-serif; /* Sets the default font for the page */
+    background-color: #f4f7f6; /* Light grey background color for the whole page */
+    padding: 8px;
+}
+
+/* Logo Styles */
+.logo {
+    font-family: 'Quicksand', sans-serif; /* Custom font for the logo */
+    color: #333; /* Dark grey color for the text */
+}
+.element {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+.element.visible {
+    opacity: 1;
+}
+
+/* Gradient Text Effect for 'RCM' in Logo */
+.logo span {
+    font-family: 'Quicksand', sans-serif; /* Ensures consistent font for the span */
+    background: linear-gradient(to bottom, #007bff, #004085); /* Blue gradient for the text */
+    -webkit-background-clip: text; /* Clips the background to the text (WebKit) */
+    background-clip: text; /* Clips the background to the text */
+    color: transparent; /* Makes the text color transparent */
+    font-weight: bold; /* Bold font weight for emphasis */
+}
