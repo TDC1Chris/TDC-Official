@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    overflow-y: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f7f6;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    /* Horizontal shadow */
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 32px;
+    /* Additional logo styles if needed */
+}
+
+/* User Info and Dropdown Menu */
+.user-info {
+    position: relative;
+    right: 3vw;
+    cursor: pointer;
+    margin-left: auto;
+    /* Aligns user-info to the right */
+}
+
+.user-info span {
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    /* Aligns dropdown to the right of user-info */
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    min-width: 150px;
+}
+
+.user-info:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #007bff;
+}
+
+/* Navigation Bar */
+
+nav {
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: -200px;
+    /* Initially off-screen */
+    bottom: 0;
+    overflow-y: auto;
+    background-image: linear-gradient(to bottom, #414141, #0e0e0e);
+    transition: left 0.3s;
+    z-index: 99999;
+    /* Smooth transition for opening/closing */
+}
+
+/* Navigation Toggle Button */
+#nav-toggle {
+    border-bottom-right-radius: 5px;
+    font-size: 30px;
+    background: #414141;
+    color: #f4f7f6;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 60px;
+    z-index: 99999;
+    transition: left 0.3s;
+    /* Smooth transition for moving with the navigation bar */
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    /* Text color for better visibility */
+}
+
+nav ul li a.active {
+    background-color: #007bff;
+    /* Darker blue for active link */
+    color: #fff;
+    /* White text color */
+    font-weight: bold;
+
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    margin-top: 109px;
+    text-align: center; /* Center content horizontally */
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+}
+
+section {
+    text-align: center; /* Center content horizontally */
+    background-color: #f4f7f6;
+}
+
+main h1 {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(75, 75, 75);
+    color: #f4f7f6;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .user-info {
+        right: 10vw;
+    }
+}
